@@ -79,10 +79,10 @@ function create() {
     //  We will enable physics for any star that is created in this group
     stars.enableBody = true;
     //  Here we'll create 12 of them evenly spaced apart
-    for (var i = 0; i < 1000; i++)
+    for (var i = 0; i < 50; i++)
     {
         //  Create a star inside of the 'stars' group
-        var star = stars.create(i * 1, 0, 'star');
+        var star = stars.create(i * 15, 0, 'star');
         //  Let gravity do its thing
         star.body.gravity.y = 300;
         //  This just gives each star a slightly random bounce value
@@ -121,13 +121,13 @@ function update() {
     if (cursors.left.isDown)
     {
         //  Move to the left
-        player.body.velocity.x = -100;
+        player.body.velocity.x = -300;
         player.animations.play('left');
     }
     else if (cursors.right.isDown)
     {
         //  Move to the right
-        player.body.velocity.x = 100;
+        player.body.velocity.x = 300;
         player.animations.play('right');
     }
     else
